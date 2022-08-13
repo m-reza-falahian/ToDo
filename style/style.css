@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Mouse Memoirs','Yekan', sans-serif;
+    font-family: 'Mouse Memoirs', 'Yekan', sans-serif;
 }
 
 #inp {
@@ -22,29 +22,27 @@
     border-radius: 5rem;
 }
 
-#text-in {
-    margin: 0 1rem;
+.inps {
+    margin: auto 1rem;
     padding: .75rem;
     font-size: 1.25rem;
     border: none;
     border-radius: 5rem;
+}
+
+#text-in {
     width: 40rem;
 }
 
 #add-in {
-    margin: auto 1rem;
-    padding: .75rem;
     width: 7rem;
-    font-size: 1.25rem;
     font-weight: bold;
-    border: none;
-    border-radius: 5rem;
     background-color: white;
 }
 
 #list {
     width: 80%;
-    margin: 1rem 10%;
+    margin: 1rem auto;
     display: flex;
     flex-flow: column;
 }
@@ -60,11 +58,27 @@
     justify-content: space-between;
 }
 
-.right{
+.right {
     display: flex;
     flex-flow: row;
 }
 
-.delete{
+.delete {
     margin: auto;
+}
+
+@media(max-width:700px) {
+    .inps{
+        margin: auto .5rem;
+        font-size: 1.1rem;
+    }
+    .do{
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width:900px) {
+    .inputs {
+        width: 90%;
+    }
 }
