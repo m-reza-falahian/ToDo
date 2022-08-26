@@ -11,14 +11,12 @@ if (localStorage.getItem('toDoList')) {
     toDoList = array;
 }
 
-
 //write todo list on page & add them to localStorage
 function writeList() {
     document.getElementById('list').innerHTML = null;
     let i = 0;
 
     while (i < toDoList.length) {
-        console.log(toDoList[i]);
         if (toDoList[i] != undefined && toDoList[i] != "") {
             var ch = '';
             if (toDoList[i][1] == 1) ch = "checked";
@@ -27,10 +25,9 @@ function writeList() {
         }
         i++;
     }
-    console.log(toDoList);
     localStorage.setItem('toDoList', toDoList.join('&'));
     console.log(localStorage.getItem('toDoList'));
-    // console.log(toDoList);
+    console.log(toDoList);
 }
 
 //add an item to list
@@ -48,7 +45,7 @@ function add() {
 
 //delete an item from list
 function del(id) {
-    delete toDoList[id];
+    toDoList.splice(id, 1);
     writeList();
 }
 
@@ -59,7 +56,6 @@ function change(id) {
 }
 
 writeList();
-
 
 document.getElementById("add-in").addEventListener('click', add);
 document.getElementById("text-in").addEventListener('keydown', e => {
