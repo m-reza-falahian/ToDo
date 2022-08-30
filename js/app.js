@@ -21,7 +21,7 @@ function writeList() {
             var ch = '';
             if (toDoList[i][1] == 1) ch = "checked";
             document.getElementById("list")
-                .insertAdjacentHTML('beforeend', "<div id='" + i + "' class='do'> <div class='left'> <p>" + toDoList[i][0] + "</p> </div> <div class='right'> <input type='checkbox' name='did' class='do-check' onclick='change(" + i + ")' " + ch + "> <i class='delete bi bi-trash' onclick='del(" + i + ")'></i> </div> </div>");
+                .insertAdjacentHTML('beforeend', "<div id='" + i + "' class='do'> <div class='left'> <p>" + toDoList[i][0] + "</p> </div> <div class='right'> <input type='checkbox' name='did' class='do-check do-in' onclick='change(" + i + ")' " + ch + "> <i class='delete bi bi-trash do-in' onclick='del(" + i + ")' title='delete'></i> </div> </div>");
         }
         i++;
     }
