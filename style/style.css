@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Mouse Memoirs', 'Yekan', sans-serif;
+    font-family: 'Mouse Memoirs', 'Vazir', sans-serif;
 }
 
 #inp {
@@ -39,6 +39,11 @@
     font-weight: bold;
     background-color: white;
     cursor: pointer;
+    transition: 100ms;
+}
+
+#add-in:hover {
+    scale: 1.05;
 }
 
 #list {
@@ -70,6 +75,27 @@
 
 .do-in {
     cursor: pointer;
+    transition: 50ms;
+}
+
+.do-in:hover {
+    transform: scale(1.025);
+}
+
+#add-pwa {
+    display: none;
+    padding: 0.5rem;
+    background: #bdc3c7;
+    border-radius: 10rem;
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    cursor: pointer;
+    transition: 150ms;
+}
+
+#add-pwa:hover {
+    scale: 1.1;
 }
 
 @media(max-width:700px) {
