@@ -59,33 +59,31 @@ writeList();
 
 document.getElementById("add-in").addEventListener('click', add);
 document.getElementById("text-in").addEventListener('keydown', e => {
-    if (e.code == 'Enter') add();
+    if (e.key == 'Enter') add();
 })
 
 //service-worker registering
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("./service-worker.js")
         .then(register => {
-            console.log(register);
         })
         .catch(err => {
             console.log(err);
         })
 }
 
-//show add to home screen baner
+//show install app baner
 var installPromptEvent;
-
+let addPwa = document.getElementById('add-pwa');
 window.addEventListener('beforeinstallprompt', e => {
-    e.preventDefault;
+    e.preventDefault();
 
     installPromptEvent = e;
+
+    addPwa.style.display = "table";
 })
 
-if (installPromptEvent !== undefined) {
-    document.getElementById('add-pwa').style.display = "table";
-}
-
-document.getElementById('add-pwa').addEventListener("click", () => {
+addPwa.addEventListener("click", () => {
+    addPwa.style.display = "none";
     installPromptEvent.prompt();
 })
