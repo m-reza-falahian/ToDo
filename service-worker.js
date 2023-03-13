@@ -1,4 +1,4 @@
-let version = 2;
+let version = "2.1.3";
 let currentCache = "ToDoCache-v" + version;
 
 //service-worker installing

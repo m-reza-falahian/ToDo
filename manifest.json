@@ -11,12 +11,12 @@
     "theme_color": "#bdc3c7",
     "icons": [
         {
-            "src": "/files/To Do icon 512.png",
+            "src": "ToDo/files/To Do icon 512.png",
             "type": "image/png",
             "sizes": "512x512"
         },
         {
-            "src": "/files/To Do icon 192.png",
+            "src": "ToDo/files/To Do icon 192.png",
             "type": "image/png",
             "sizes": "192x192"
         }
