@@ -22,6 +22,7 @@ self.addEventListener("activate", (event) => {
 })
 
 self.addEventListener("fetch", (event) => {
+    console.log(event);
     event.respondWith(
         caches.open(currentCache).then(cache => {
             return cache.match(event.request).then(response => {
@@ -33,6 +34,7 @@ self.addEventListener("fetch", (event) => {
                     cache.put(event.request, networkReponse.clone());
                     return networkReponse;
                 }).catch(err => {
+                    console.log(err);
                 })
             })
         })
