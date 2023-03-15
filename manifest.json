@@ -2,7 +2,7 @@
     "name": "To Do",
     "short_name": "To Do",
     "description": "add your note to check them",
-    "start_url": "/",
+    "start_url": "/ToDo",
     "scope": "/",
     "display": "standalone",
     "lang": "en",
